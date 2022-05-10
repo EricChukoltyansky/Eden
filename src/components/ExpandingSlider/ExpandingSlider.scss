@@ -1,0 +1,58 @@
+.expanding-wrapper {
+  width: 80vw;
+
+  margin: 0 auto;
+  margin-top: 300px;
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    .sec {
+      overflow: hidden;
+      position: relative;
+      min-width: 5%;
+      color: #fff;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      min-height: 300px;
+      transition: 0.5s;
+
+      &:hover {
+        min-width: 40%;
+        transition: 0.5s;
+      }
+    }
+
+    .frame {
+      background: #0f0523 50% 50% / cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      -webkit-transition: 1s;
+      transition: 1s;
+
+      &::before {
+        background: -webkit-linear-gradient(
+          transparent,
+          rgba(67, 17, 51, 0.5),
+          #000320
+        );
+        background: linear-gradient(
+          transparent,
+          rgba(67, 17, 51, 0.5),
+          #000320
+        );
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+}

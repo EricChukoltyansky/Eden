@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import images from "./images";
+import images from "../../assets/imagesScripts/images";
 import "./Slider.scss";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import BtnSlider from "../BtnSlider/BtnSlider";
@@ -47,9 +47,9 @@ function Slider() {
           </span>
         </div>
         <div className="sliding-btns">
-          {Array.from({ length: 5 }).map((index) => (
+          {Array.from({ length: 5 }).map((item,index) => (
             <>
-              {/* <BtnSlider key={index} direction={index} moveSlide={increment} /> */}
+              
               <div
                 key={index}
                 className={
