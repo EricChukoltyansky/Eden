@@ -11,8 +11,13 @@ const images = [
     alt: "Galleries",
     title: "EDEN GALLERY",
     subtitle: "A Vibrant World of Contemporary Art",
-    description:
-      "Eden Gallery represents brilliant contemporary artists worldwide, displaying their art in breathtaking galleries in some of the top premium locations around the world.",
+    description: [
+      "Eden Gallery represents brilliant contemporary artists worldwide",
+      <br />,
+      "displaying their art in breathtaking galleries in some of the top premium locations around the world.",
+    ],
+    button: "Discover",
+    
   },
   {
     id: 2,
@@ -21,6 +26,7 @@ const images = [
     title: "ARTISTS",
     subtitle: "Unique Contemporary Artists",
     description: "Learn More About Eden Gallery's exclusive artists",
+    button: "Learn More",
   },
   {
     id: 3,
@@ -29,6 +35,7 @@ const images = [
     title: "COLLECTIONS",
     subtitle: "ORIGINAL COLLECTIONS",
     description: "Original Collections",
+    button: "Discover",
   },
   {
     id: 4,
@@ -37,14 +44,16 @@ const images = [
     title: "ARTWORKS",
     subtitle: "A Diverse Collection of Fine Art ",
     description: "Browse individual works of art.",
+    button: "Browse",
   },
   {
     id: 5,
     src: img5,
-    alt: "Events&Exhibitions",
+    alt: "Events & Exhibitions",
     title: "EVENTS",
     subtitle: "Special Events",
     description: "Inspiring art exhibitions and celebrations.",
+    button: "See Events",
   },
 ];
 

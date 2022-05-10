@@ -7,10 +7,10 @@ import BtnSlider from "../BtnSlider/BtnSlider";
 function Slider() {
   const [value, setValue] = useState(0);
 
+  console.log(value);
+
   const increment = () => {
     setValue((prevState) => (prevState += 1));
-    console.log(value);
-    console.log(images.length);
     if (value >= images.length - 1) setValue((prevState) => (prevState = 0));
   };
 
@@ -24,10 +24,13 @@ function Slider() {
       <div className="container">
         <div className="slider">
           <div className="image-container">
-            <div className="titles">
-              <h2>{images[value].title}</h2>
-              <h4>{images[value].subtitle}</h4>
-              <p>{images[value].description}</p>
+            <div className="img-titles">
+              <div className="title-wrapper">
+                <h2>{images[value].title}</h2>
+                <h4>{images[value].subtitle}</h4>
+                <p>{images[value].description}</p>
+              </div>
+              <button>{images[value].button}</button>
             </div>
             <img src={images[value].src} alt={images[value].alt} />
           </div>
@@ -43,12 +46,20 @@ function Slider() {
             </button>
           </span>
         </div>
-        <div className="sliding-btns"></div>
-        <BtnSlider />
-        <BtnSlider />
-        <BtnSlider />
-        <BtnSlider />
-        <BtnSlider />
+        <div className="sliding-btns">
+          {Array.from({ length: 5 }).map((index) => (
+            <>
+              {/* <BtnSlider key={index} direction={index} moveSlide={increment} /> */}
+              <div
+                key={index}
+                className={
+                  value === index ? "sliding-btn active" : "sliding-btn"
+                }
+              ></div>
+            </>
+          ))}
+        </div>
+        <button className="discover-btn">Discover Our Galleries</button>
       </div>
     </>
   );

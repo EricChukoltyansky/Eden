@@ -1,12 +1,14 @@
 header {
   width: 80vw;
-  border: 1px solid black;
   margin: 0 auto;
   height: 15vh;
 }
 
 .top-nav {
-    margin-top: 40px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   .heart-icon {
     margin-left: 20px;
 
@@ -38,10 +40,10 @@ header {
     display: flex;
     list-style-type: none;
     justify-content: space-between;
-    
+
     div {
-        display: flex;
-    };
+      display: flex;
+    }
 
     span {
       margin-right: 100px;
