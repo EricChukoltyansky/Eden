@@ -2,9 +2,18 @@ import React from "react";
 import "./Navbar.scss";
 import { AiOutlineHeart } from "react-icons/ai";
 import logo from "../../assets/images/logo-red.svg";
-import Slider from "../Slider/Slider";
 
 function Navbar() {
+  const [color, setColor] = React.useState("black");
+
+  const handleClick = () => {
+    if (color === "black") {
+      setColor("red");
+    }
+    if (color === "red") {
+      setColor("black");
+    }
+  };
   return (
     <>
       <header>
@@ -15,7 +24,7 @@ function Navbar() {
               placeholder="Search Artist, Artwork, Gallery "
             ></input>
             <span className="heart-icon">
-              <AiOutlineHeart />
+              <AiOutlineHeart onClick={handleClick} style={{ color: color }} />
             </span>
             <span className="online-shop">Online Shop</span>
           </div>
