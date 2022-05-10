@@ -1,0 +1,60 @@
+header {
+  width: 80vw;
+  border: 1px solid black;
+  margin: 0 auto;
+  height: 15vh;
+}
+
+.top-nav {
+    margin-top: 40px;
+  .heart-icon {
+    margin-left: 20px;
+
+    &:hover {
+      cursor: pointer;
+      color: red;
+    }
+  }
+
+  .online-shop {
+    margin-left: 40px;
+
+    &:hover {
+      cursor: pointer;
+      color: red;
+    }
+  }
+
+  input {
+    background-color: #f6f6f6;
+    height: 30px;
+    width: 240px;
+  }
+}
+
+.bottom-nav {
+  width: 100%;
+  ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    
+    div {
+        display: flex;
+    };
+
+    span {
+      margin-right: 100px;
+      margin-top: 9px;
+    }
+    li {
+      margin-right: 1rem;
+      font-size: 1.5rem;
+
+      &:hover {
+        cursor: pointer;
+        color: red;
+      }
+    }
+  }
+}

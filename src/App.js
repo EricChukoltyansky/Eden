@@ -1,12 +1,14 @@
-import './App.css';
-import Navbar from './components/Nabbar/Navbar';
-
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import Slider from "./components/Slider/Slider";
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      
+      <div>
+        <Navbar />
+        <Slider />
+      </div>
     </div>
   );
 }
