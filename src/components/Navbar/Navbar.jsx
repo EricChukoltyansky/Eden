@@ -7,7 +7,6 @@ import smallLogo from "../../assets/images/eden_logo_red.svg";
 function Navbar() {
   const [color, setColor] = React.useState("black");
   const [colorChange, setColorchange] = React.useState(false);
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
 
   const handleClick = () => {
     if (color === "black") {
@@ -24,10 +23,6 @@ function Navbar() {
     } else {
       setColorchange(false);
     }
-  };
-
-  const handleToggle = () => {
-    setNavbarOpen(!navbarOpen);
   };
   window.addEventListener("scroll", changeNavbarColor);
 
@@ -68,17 +63,12 @@ function Navbar() {
 
       <div className="responsive-header">
         <div>
-          <AiOutlineHeart onClick={handleClick} style={{ color: color }} />
+          
         </div>
         <div>
           <img alt="logo" src={smallLogo} className="small-logo" />
         </div>
-        <div>
-          <button onClick={handleToggle}>
-            {navbarOpen ? "Close" : "Open"}
-          </button>{" "}
-          <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>...</ul>
-        </div>
+        <div></div>
       </div>
     </>
   );

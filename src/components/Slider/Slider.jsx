@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import images from "../../assets/imagesScripts/images";
 import "./Slider.scss";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
@@ -17,6 +17,13 @@ function Slider() {
     setValue((prevState) => (prevState -= 1));
     if (value <= 0) setValue((prevState) => (prevState = images.length - 1));
   };
+
+  useEffect(() => {
+    const loop = setInterval(() => {
+      increment();
+    }, 3000);
+    return () => clearInterval(loop);
+  }, [value]);
 
   return (
     <>
@@ -53,6 +60,7 @@ function Slider() {
                 className={
                   value === index ? "sliding-btn active" : "sliding-btn"
                 }
+                onClick={() => setValue(index)}
               ></div>
             </>
           ))}

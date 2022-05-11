@@ -62,6 +62,13 @@
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+
+    button {
+      font-size: x-large;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
   }
 
   .sliding-btns {
@@ -72,6 +79,7 @@
       width: 307px;
       height: 5px;
       background-color: gray;
+      cursor: pointer;
     }
     .active {
       background-color: black;
