@@ -1,5 +1,5 @@
-import collection1 from "../images/collection1.jpg";
-import collection2 from "../images/collection2.jpg";
+import collection1 from "../../assets/images/collection1.jpg";
+import collection2 from "../../assets/images/collection2.jpg";
 
 const collectionImages = [
   {
