@@ -4,7 +4,6 @@
   height: 15vh;
   position: sticky;
   top: 0;
-  // bottom: 0;
   z-index: 999;
 
   .top-nav {
@@ -81,71 +80,8 @@
   display: none;
 }
 
-@media screen and (max-width: 1120x) {
-  header {
-    width: 80%;
-    margin: 0 auto;
-    height: 15vh;
+@media (max-width: 1120px) {
+  .header {
     background-color: black !important;
-    .top-nav {
-      margin-top: 40px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      .heart-icon {
-        margin-left: 20px;
-
-        &:hover {
-          cursor: pointer;
-          color: red;
-        }
-      }
-
-      .online-shop {
-        margin-left: 40px;
-
-        &:hover {
-          cursor: pointer;
-          color: red;
-        }
-      }
-
-      input {
-        background-color: #f6f6f6;
-        height: 40px;
-        width: 300px;
-        border: none;
-      }
-    }
-
-    .bottom-nav {
-      width: 100%;
-
-      ul {
-        display: flex;
-        list-style-type: none;
-        justify-content: space-between;
-
-        div {
-          display: flex;
-        }
-
-        span {
-          margin-right: 100px;
-          margin-top: 9px;
-        }
-        li {
-          margin-right: 1rem;
-          font-weight: 400;
-          line-height: 20px;
-          font-size: 20px;
-
-          &:hover {
-            cursor: pointer;
-            color: red;
-          }
-        }
-      }
-    }
   }
 }
