@@ -27,8 +27,8 @@ function Navbar() {
 
   return (
     <>
-      <div className="header">
-        <div className={colorChange ? "navbar changeColorSize" : "navbar"}>
+      <div className={colorChange ? "header changeColorSize" : "header"}>
+        <div className="navbar">
           <div className="top-nav">
             <input
               type="text"
