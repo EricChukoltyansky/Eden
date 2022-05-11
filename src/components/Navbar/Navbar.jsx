@@ -29,7 +29,7 @@ function Navbar() {
     <>
       <div className={colorChange ? "header changeColorSize" : "header"}>
         <div className="navbar">
-          <div className="top-nav">
+          <div className={colorChange ? "top-nav-none " : "top-nav"}>
             <input
               type="text"
               placeholder="Search Artist, Artwork, Gallery "

@@ -73,6 +73,12 @@
   width: 100% !important;
   box-shadow: 0 8px 8px -4px lightblue;
   background-color: white;
+  height: 7vh;
+  padding-top: 10px;
+}
+
+.top-nav-none {
+  display: none;
 }
 
 @media screen and (max-width: 1120x) {
