@@ -6,8 +6,11 @@
   margin: 0 auto;
   margin-top: 50px;
   color: white;
-  //   filter: brightness(70%);
   text-align: left;
   padding: 20px;
-  vertical-align: bottom;
+  box-sizing: border-box;
+  padding-top: 300px;
+  -webkit-text-stroke: 0.2px black;
+  color: rgb(255, 255, 255);
+  -webkit-font-smoothing: antialiased;
 }
