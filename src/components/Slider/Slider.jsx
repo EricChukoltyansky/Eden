@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import images from "../../assets/imagesScripts/images";
 import "./Slider.scss";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import BtnSlider from "../BtnSlider/BtnSlider";
 
 function Slider() {
   const [value, setValue] = useState(0);
@@ -47,9 +46,8 @@ function Slider() {
           </span>
         </div>
         <div className="sliding-btns">
-          {Array.from({ length: 5 }).map((item,index) => (
+          {Array.from({ length: 5 }).map((item, index) => (
             <>
-              
               <div
                 key={index}
                 className={

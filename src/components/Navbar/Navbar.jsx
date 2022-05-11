@@ -5,6 +5,7 @@ import logo from "../../assets/images/logo-red.svg";
 
 function Navbar() {
   const [color, setColor] = React.useState("black");
+  const [colorChange, setColorchange] = React.useState(false);
 
   const handleClick = () => {
     if (color === "black") {
@@ -14,10 +15,20 @@ function Navbar() {
       setColor("black");
     }
   };
+
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 80) {
+      setColorchange(true);
+    } else {
+      setColorchange(false);
+    }
+  };
+  window.addEventListener("scroll", changeNavbarColor);
+
   return (
     <>
-      <header>
-        <nav className="navbar">
+      <div className="header">
+        <div className={colorChange ? "navbar changeColorSize" : "navbar"}>
           <div className="top-nav">
             <input
               type="text"
@@ -33,7 +44,6 @@ function Navbar() {
               <span>
                 <img alt="logo" src={logo} />
               </span>
-
               <div>
                 <li>Home</li>
                 <li>Galleries</li>
@@ -46,9 +56,8 @@ function Navbar() {
               </div>
             </ul>
           </div>
-        </nav>
-        <div></div>
-      </header>
+        </div>
+      </div>
     </>
   );
 }
