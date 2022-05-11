@@ -23,7 +23,7 @@
       border: 1px solid gray;
 
       img {
-        width: 450px;
+        width: 100%;
         height: 30%;
       }
 
@@ -44,8 +44,6 @@
 
         .read-btn {
           text-align: right;
-          // vertical-align: bottom;
-          // padding-top: 150px;
           button {
             border: none;
             background-color: transparent;
