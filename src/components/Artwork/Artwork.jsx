@@ -17,6 +17,7 @@ function Artwork() {
   return (
     <>
       <div className="artwork-wrapper">
+        <h3>Artworks</h3>
         <div className="grid-wrapper">
           {images.map((image, index) => (
             <div className="card-image">

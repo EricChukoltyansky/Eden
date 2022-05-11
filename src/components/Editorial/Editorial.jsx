@@ -6,6 +6,7 @@ function Editorial() {
   return (
     <>
       <div className="editorial-container">
+        <h3>Editorial</h3>
         <div className="editorial-wrapper">
           {images.map((image, index) => (
             <div>
@@ -24,7 +25,7 @@ function Editorial() {
             </div>
           ))}
         </div>
-        <button>Read More</button>
+        <button className="edit-btn">Read More</button>
       </div>
     </>
   );

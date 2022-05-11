@@ -2,6 +2,15 @@
   width: 80vw;
   margin: 0 auto;
   margin-top: 170px;
+ 
+  h3 {
+    font-size:22px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #0f0e0e;
+    text-align: left;
+  }
+
   .row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -74,5 +83,27 @@
     .active {
       background-color: black;
     }
+  }
+}
+
+.view-btn {
+  width: 200px;
+  height: 50px;
+  float: right;
+  margin-top: 10px;
+  font-size: medium;
+  background: transparent;
+  border: 1px solid black;
+
+  &:hover {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .expanding-wrapper {
+    display: none;
   }
 }

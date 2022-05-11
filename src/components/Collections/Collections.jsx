@@ -6,6 +6,7 @@ function Collections() {
   return (
     <>
       <div className="collections-container">
+        <h3>Collections</h3>
         <div className="collections-wrapper">
           {images.map((image, index) => (
             <div key={index} className="collection-item">

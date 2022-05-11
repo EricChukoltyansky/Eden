@@ -7,8 +7,8 @@ function ExpandingSlider() {
 
   return (
     <>
-      {console.log(value)}
       <div className="expanding-wrapper">
+        <h3>Artists</h3>
         <div class="row">
           {images[value].map((image, index) => (
             <div className="sec">
@@ -33,6 +33,7 @@ function ExpandingSlider() {
             </>
           ))}
         </div>
+        <button className="view-btn">View Artists</button>
       </div>
     </>
   );
