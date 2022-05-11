@@ -2,10 +2,12 @@ import React from "react";
 import "./Navbar.scss";
 import { AiOutlineHeart } from "react-icons/ai";
 import logo from "../../assets/images/logo-red.svg";
+import smallLogo from "../../assets/images/eden_logo_red.svg";
 
 function Navbar() {
   const [color, setColor] = React.useState("black");
   const [colorChange, setColorchange] = React.useState(false);
+  const [navbarOpen, setNavbarOpen] = React.useState(false);
 
   const handleClick = () => {
     if (color === "black") {
@@ -22,6 +24,10 @@ function Navbar() {
     } else {
       setColorchange(false);
     }
+  };
+
+  const handleToggle = () => {
+    setNavbarOpen(!navbarOpen);
   };
   window.addEventListener("scroll", changeNavbarColor);
 
@@ -42,7 +48,8 @@ function Navbar() {
           <div className="bottom-nav">
             <ul>
               <span>
-                <img alt="logo" src={logo} />
+                <img alt="logo" src={logo} className="big-logo" />
+                <img alt="logo" src={smallLogo} className="small-logo" />
               </span>
               <div>
                 <li>Home</li>
@@ -56,6 +63,21 @@ function Navbar() {
               </div>
             </ul>
           </div>
+        </div>
+      </div>
+
+      <div className="responsive-header">
+        <div>
+          <AiOutlineHeart onClick={handleClick} style={{ color: color }} />
+        </div>
+        <div>
+          <img alt="logo" src={smallLogo} className="small-logo" />
+        </div>
+        <div>
+          <button onClick={handleToggle}>
+            {navbarOpen ? "Close" : "Open"}
+          </button>{" "}
+          <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>...</ul>
         </div>
       </div>
     </>
