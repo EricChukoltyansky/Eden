@@ -5,6 +5,7 @@ function Events() {
   return (
     <>
       <div className="events-wrapper">
+          <h3>Events</h3>
         <div className="img-wrapper">
           <p>20.03.2022</p>
           <h2>Alec Monopoly At The Eden</h2>

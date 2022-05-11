@@ -9,8 +9,8 @@ function Editorial() {
         <h3>Editorial</h3>
         <div className="editorial-wrapper">
           {images.map((image, index) => (
-            <div>
-              <div key={index} className="editorial-item">
+            <div key={index} className="editorial-item">
+              <div className="title-edit-container">
                 <div className="editorial-title">
                   <h2>{image.title}</h2>
                   <h4>{image.subtitle}</h4>

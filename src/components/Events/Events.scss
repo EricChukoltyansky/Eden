@@ -1,11 +1,20 @@
 .events-wrapper {
   width: 80%;
   margin: 0 auto;
+  margin-top: 150px;
+
+  h3 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #0f0e0e;
+    text-align: left;
+    margin-bottom: 0;
+  }
   .img-wrapper {
     background-image: url("../../assets/images/events.jpg");
     background-size: cover;
     height: 550px;
-    margin-top: 150px;
+    margin-top: 20px;
     color: white;
     text-align: left;
     padding: 20px;
