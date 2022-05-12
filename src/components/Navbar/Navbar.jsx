@@ -62,13 +62,13 @@ function Navbar() {
       </div>
 
       <div className="responsive-header">
-        <div>
-          
-        </div>
+        <div></div>
         <div>
           <img alt="logo" src={smallLogo} className="small-logo" />
         </div>
-        <div></div>
+        <div className="heart-icon">
+          <AiOutlineHeart onClick={handleClick} style={{ color: color }} />
+        </div>
       </div>
     </>
   );

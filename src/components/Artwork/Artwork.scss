@@ -83,3 +83,11 @@
     }
   }
 }
+
+@media screen and (max-width: 1020px) {
+  .artwork-wrapper {
+    width: 95% !important;
+    margin: 0 auto;
+    margin-top: 150px;
+  }
+}

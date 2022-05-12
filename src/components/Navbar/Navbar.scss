@@ -91,11 +91,13 @@
 @media (max-width: 1120px) {
   .header {
     display: none;
-
-    .small-logo {
-      display: block;
-    }
   }
+    .responsive-header {
+      display: block;
+      display: flex;
+      justify-content: space-between;
+    }
+  
 
   
 }

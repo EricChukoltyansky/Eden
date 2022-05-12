@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import images from "../../assets/imagesScripts/images";
+import collectionImages from "../../assets/imagesScripts/mobileCollectionImages";
 import "./Collections.scss";
 
 function Collections() {
@@ -9,7 +9,8 @@ function Collections() {
 
   const increment = () => {
     setValue((prevState) => (prevState += 1));
-    if (value >= images.length - 1) setValue((prevState) => (prevState = 0));
+    if (value >= collectionImages.length - 1)
+      setValue((prevState) => (prevState = 0));
   };
 
   useEffect(() => {
@@ -55,20 +56,24 @@ function Collections() {
           <div className="image-container">
             <div className="img-titles">
               <div className="title-wrapper">
-                <h2>{images[value].title}</h2>
-                <h4>{images[value].subtitle}</h4>
-                <p>{images[value].description}</p>
+                <h4>{collectionImages[value].alt}</h4>
+                <p>{collectionImages[value].subtitle}</p>
               </div>
-              <button>{images[value].button}</button>
             </div>
-            <img src={images[value].src} alt={images[value].alt} />
+            <img
+              src={collectionImages[value].src}
+              alt={collectionImages[value].alt}
+            />
           </div>
         </div>
+
         <div className="bottom-slider">
-          <span className="bottom-title">{images[value].alt}</span>
+          <span className="bottom-title">
+            {collectionImages[value].description}
+          </span>
         </div>
         <div className="sliding-btns">
-          {Array.from({ length: 5 }).map((item, index) => (
+          {Array.from({ length: 6 }).map((item, index) => (
             <>
               <div
                 key={index}
