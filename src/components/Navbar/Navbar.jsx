@@ -62,9 +62,43 @@ function Navbar() {
       </div>
 
       <div className="responsive-header">
-        <div></div>
-        <div>
-          <img alt="logo" src={smallLogo} className="small-logo" />
+        <div className="menu-wrap">
+          <input type="checkbox" class="toggler" />
+          <div className="hamburger">
+            <div></div>
+          </div>
+          <div className="menu">
+            <div>
+              <input
+                type="text"
+                placeholder="Search Artist, Artwork, Gallery "
+              ></input>
+              <ul>
+                <li>Home</li>
+                <hr />
+                <li>Galleries</li>
+                <hr />
+                <li>Artists</li>
+                <hr />
+                <li>Collections</li>
+                <hr />
+                <li>Artworks</li>
+                <hr />
+                <li>News</li>
+                <hr />
+                <li>About Eden</li>
+                <hr />
+                <li>Contact Us</li>
+                <hr />
+                <li>
+                  <b>Online Shop</b>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="small-logo">
+          <img alt="logo" src={smallLogo} />
         </div>
         <div className="heart-icon">
           <AiOutlineHeart onClick={handleClick} style={{ color: color }} />
