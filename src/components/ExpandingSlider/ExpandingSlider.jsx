@@ -9,7 +9,7 @@ function ExpandingSlider() {
     <>
       <div className="expanding-wrapper">
         <h3>Artists</h3>
-        <div class="row">
+        <div className="row">
           {images[value].map((image, index) => (
             <div className="sec">
               <div

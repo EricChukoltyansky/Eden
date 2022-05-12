@@ -6,7 +6,7 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 function Slider() {
   const [value, setValue] = useState(0);
 
-  console.log(value);
+  // console.log(value);
 
   const increment = () => {
     setValue((prevState) => (prevState += 1));

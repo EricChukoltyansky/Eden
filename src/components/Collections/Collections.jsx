@@ -5,7 +5,7 @@ import "./Collections.scss";
 function Collections() {
   const [value, setValue] = useState(0);
 
-  console.log(value);
+  // console.log(value);
 
   const increment = () => {
     setValue((prevState) => (prevState += 1));
