@@ -4,15 +4,12 @@ import { AiOutlineHeart } from "react-icons/ai";
 import logo from "../../assets/images/logo-red.svg";
 import smallLogo from "../../assets/images/eden_logo_red.svg";
 import HoverNavbar from "../HoverNavbar/HoverNavbar";
-import galleryImages from "../../assets/imagesScripts/mobileCollectionImages";
+import galleryImages from "../../assets/imagesScripts/galleryNavHoverImages";
 
 function Navbar() {
   const [color, setColor] = React.useState("black");
   const [colorChange, setColorchange] = React.useState(false);
   const [isGalleriesHover, setIsGalleriesHover] = React.useState(false);
-  const [isArtistsHover, setIsArtistsHover] = React.useState(false);
-  const [isCollectionHover, setIsCollectionHover] = React.useState(false);
-  const [isNewsHover, setIsNewsHover] = React.useState(false);
 
   const galleriesArray = [
     "Soho/Nyc",
@@ -24,32 +21,6 @@ function Navbar() {
     "All Galleries",
   ];
 
-  const artistsArray = [
-    "Alec Monopoly",
-    "Angelo Accardi",
-    "Gal Yosef",
-    "David Kracov",
-    "Eduardo Kobra",
-    "Dorit Levinstein",
-    "Yoel Benharrouche",
-    "SN",
-    "Calman Shemi",
-    "F&G",
-    "Metis Atash",
-    "All Artists",
-  ];
-
-  const collectionArray = [
-    "Paintings",
-    "Sculptures",
-    "Mixed Media",
-    "Shadow Boxes",
-    "Photography",
-    "Papercuts",
-    "3D Wall Sculpture",
-    "Explore All",
-  ];
-
   const handleClick = () => {
     if (color === "black") {
       setColor("red");
@@ -59,7 +30,7 @@ function Navbar() {
     }
   };
 
-  const handleHover = () => {
+  const handleGalleriesHover = () => {
     setIsGalleriesHover(!isGalleriesHover);
   };
 
@@ -95,7 +66,7 @@ function Navbar() {
               </span>
               <div>
                 <li>Home</li>
-                <li onMouseEnter={handleHover}>Galleries</li>
+                <li onMouseEnter={handleGalleriesHover}>Galleries</li>
                 <li>Artists</li>
                 <li>Collection</li>
                 <li>Artworks</li>
@@ -162,7 +133,7 @@ function Navbar() {
         <HoverNavbar
           data={galleriesArray}
           images={galleryImages}
-          handleHover={handleHover}
+          handleHover={handleGalleriesHover}
         />
       ) : null}
     </>
