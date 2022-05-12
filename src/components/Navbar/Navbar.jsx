@@ -18,7 +18,7 @@ function Navbar() {
   };
 
   const changeNavbarColor = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 1) {
       setColorchange(true);
     } else {
       setColorchange(false);
@@ -61,9 +61,9 @@ function Navbar() {
         </div>
       </div>
 
-      <div className="responsive-header">
+      <div className={colorChange ? "responsive-header sticky-responsive-header" : "responsive-header"}>
         <div className="menu-wrap">
-          <input type="checkbox" class="toggler" />
+          <input type="checkbox" className="toggler" />
           <div className="hamburger">
             <div></div>
           </div>
