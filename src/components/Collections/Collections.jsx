@@ -18,7 +18,7 @@ function Collections() {
       increment();
     }, 3000);
     return () => clearInterval(loop);
-  }, [value]);
+  });
 
   return (
     <>
